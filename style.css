@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f2f2f2;
+}
+
+.font{
+font-family: 'Montserrat', sans-serif;
+}
+
+.bg-img {
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)), url(https://source.unsplash.com/random/?india-history);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 625px;
+    position: relative;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+header li {
+    float: left;
+    padding: 20px;
+}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15pt;
+}
+header li a .active{
+	color: #00b894;
+}   
+
+header li img {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+}
+
+header li a:hover {
+    background-color: #450CB0;
+}
+
+header main{
+
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 75vh; 
+}
+.fontstyle{
+    text-align: center;
+	font-size: 25px;
+	font-weight: 200;
+	text-shadow: 3px 3px 5px black;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 55px;
+}
+
+header main section a{
+	padding: 12px 30px;
+	border-radius: 4px;
+	outline: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 500;
+	text-decoration: none;
+	letter-spacing: 1px;
+	background: #00b894;
+	color: white;
+
+}
+header main section a:hover{
+	background: #715AC6;
+	color: white;
+}
+
+
+/*Search bar */
+
+header nav div .search-container {
+  float: right;
+}
+
+header nav div input[type=text] {
+  padding: 6px;
+  margin-top: 20px;
+  font-size: 17px;
+  border: none;
+}
+
+header nav div .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 20px;
+  margin-right: 16px;
+  background: #00b894;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+header nav div .search-container button:hover {
+  background: #715AC6;
+}
+
+@media screen and (max-width: 600px) {
+  header nav div .search-container {
+    float: none;
+  }
+  header nav div header nav div input[type=text], header nav div .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  header nav div input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+/*About Us Column*/
+.row{
+    margin-left: 10%;
+}
+
+.column{
+  float: left;
+  width: 50%;
+   }
+
+/*form*/
+.contact input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 500px;
+}
+
+.contact input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+section div form div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/*top cursor*/
+#button {
+  display: inline-block;  
+  background-color: #00b894;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Footer*/
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #00b894;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #2b2b2b;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
